@@ -2,6 +2,7 @@ import React from "react";
 import Moment from "react-moment";
 import "moment/locale/ru";
 import { Card, Button } from "react-bootstrap";
+import { Link } from "react-router-dom";
 
 const Todos = ({ todo }) => {
   console.log(todo);
@@ -16,10 +17,9 @@ const Todos = ({ todo }) => {
       <Card.Body>
         <Card.Title>{todo.title}</Card.Title>
         <Card.Text>{todo.todo}</Card.Text>
-        <Button variant="primary">Редактировать</Button>
-        <Button variant="danger" className="ml-1">
-          Удалить
-        </Button>
+        <Link to={`/edit/${todo.id_todo}`}>
+          <Button variant="primary">Редактировать</Button>
+        </Link>
       </Card.Body>
     </Card>
   );

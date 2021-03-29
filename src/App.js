@@ -9,6 +9,7 @@ import About from "./Components/About";
 import Features from "./Components/Features";
 import Pricing from "./Components/Pricing";
 import FormAdd from "./Components/Form";
+import Edit from "./Components/Edit";
 
 const App = () => {
   return (
@@ -22,6 +23,7 @@ const App = () => {
             <Route exact path="/features" component={Features} />
             <Route exact path="/price" component={Pricing} />
             <Route exact path="/create" component={FormAdd} />
+            <Route exact path="/edit/:id" component={Edit} />
           </Switch>
         </section>
       </Router>
